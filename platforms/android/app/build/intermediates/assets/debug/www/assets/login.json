@@ -1,0 +1,30 @@
+[{
+    "email": "prashanthab@ducontindia.com",
+    "password": "Prashanth",
+    "userName" : "Prashanth Ab",
+    "employeeId" : "417",
+    "firstName" : "Prashanth",
+    "lastName" : "Ab",
+    "dob" : "13/05/1995",
+    "phone" : "9500833339"
+},
+{
+    "email": "abprashanth33339@gmail.com",
+    "password": "Prashanth",
+    "userName" : "Prashanth Ab",
+    "employeeId" : "417",
+    "firstName" : "Prashanth",
+    "lastName" : "Ab",
+    "dob" : "13/05/1995",
+    "phone" : "9500833339"
+},
+{
+    "email": "kannanvcetcse@gmail.com",
+    "password": "password",
+    "userName" : "Kannan M",
+    "employeeId" : "",
+    "firstName" : "",
+    "lastName" : "",
+    "dob" : "",
+    "phone" : ""
+}]
