@@ -78,14 +78,13 @@ export class LoginPage {
           this.common.loading('Logging In', 1000, '');
           this.common.nativeStorage.setItem('LoggedIn_User', this.validEmail[0]);
           this.global.currentUser = this.validEmail[0];
-          console.log("Valid Email" + JSON.stringify(this.global.currentUser));
           this.navCtrl.setRoot(HomePage);
         } else {
           this.common.toast('Invalid Credentials', 3000, 'bottom', '');
         }
       }
     }, (error) => {
-      console.log("Validate User: " + error);
+      console.log('Validate User Error: ' + error);
       this.common.toast(error, 5000, 'bottom', '');
     });
   }

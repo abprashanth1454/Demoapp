@@ -61,10 +61,10 @@ export class MyApp {
       if (this.common.networkStatus() == 'none') {
         this.global.isConnected = false;
         this.global.isOnline = false;
-        console.log('Network is offline ' + this.global.isConnected);
+        console.log('Network is offline: ' + this.global.isConnected);
         this.common.networkToast();
       } else {
-        console.log('Network is online ' + this.global.isConnected);
+        console.log('Network is online: ' + this.global.isConnected);
         this.global.isConnected = true;
         this.global.isOnline = true;
       }
@@ -107,12 +107,12 @@ export class MyApp {
   getNetworkStatus() {
     this.common.network.onDisconnect().subscribe(() => {
       this.global.isOnline = false;
-      console.log('Network is offline ' + this.global.isOnline);
+      console.log('Network is offline: ' + this.global.isOnline);
       this.common.networkToast();
     });
     this.common.network.onConnect().subscribe(() => {
       this.global.isOnline = true;
-      console.log('Network is online ' + this.global.isOnline);
+      console.log('Network is online: ' + this.global.isOnline);
       this.common.toast('Network is online', 3000, 'bottom', '');
     });
   }
@@ -127,7 +127,7 @@ export class MyApp {
       if (error.code == 2) {
         this.checkSignedUpUser();
       } else {
-        console.log(error);
+        console.log('Get Current User Data Error: ' + error);
       }
     });
   }
@@ -142,7 +142,7 @@ export class MyApp {
       if (error.code == 2) {
         this.rootPage = LoginPage;
       } else {
-        console.log(error);
+        console.log('Check Signed Up User Error: ' + error);
       }
     });
   }
@@ -158,7 +158,7 @@ export class MyApp {
         manufacturer: this.device.manufacturer
       }
       this.common.nativeStorage.setItem('Device_Data', this.deviceData);
-      console.log(JSON.stringify(this.deviceData));
+      console.log('Device Data: ' + JSON.stringify(this.deviceData));
     });
   }
 

@@ -1,6 +1,5 @@
 # Specifies intentionally untracked files to ignore when using Git
 # http://git-scm.com/docs/gitignore
-
 *~
 *.sw[mnpcod]
 *.log
@@ -11,7 +10,6 @@ log.txt
 *.sublime-workspace
 .vscode/
 npm-debug.log*
-
 .idea/
 .ionic/
 .sass-cache/
@@ -25,7 +23,6 @@ plugins/android.json
 plugins/ios.json
 www/
 $RECYCLE.BIN/
-
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
