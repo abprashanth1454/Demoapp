@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title align="center">Login</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="row padding-b20" align="center">
+    <span class="col margin-t50">
+        <hr class="hr-line">
+    </span>
+    <span class="col-50 padding-5">
+      <ion-icon class="em-8" name="ios-contact-outline"></ion-icon>
+    </span>
+    <span class="col margin-t50">
+        <hr class="hr-line">
+    </span>
+  </div>
+  <ion-list>
+    <ion-item class="padding-none">
+      <ion-label stacked>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <ion-item class="padding-none">
+      <ion-label stacked>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <button ion-button color="primary" block (click)="submit()">
+      Log In&nbsp;&nbsp;
+      <ion-icon class="em-2" name="ios-log-in-outline"></ion-icon>
+    </button>
+  </div>
+  <div padding>
+    <span class="float-left">
+      <button class="font-15 bg-transparent" (click)="forgotPassword()">Forgot Password?</button>
+    </span>
+    <span class="float-right">
+      <button class="font-15 bg-transparent" (click)="signUp()">Signup</button>
+    </span>
+  </div>
+</ion-content>

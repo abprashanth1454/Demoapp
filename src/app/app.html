@@ -1,1 +1,24 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content" persistent="true" swipeEnabled="true" side="right">
+    <ion-header class="padding-8">
+        <ion-title text-center>
+            <ion-icon item-left class="em-2" name="ios-contact-outline"></ion-icon>
+            <label class="padding-l5">{{global.currentUser.userName}}</label>
+        </ion-title>
+    </ion-header>
+    <ion-content>
+        <ion-list class="border-b-1">
+            <button ion-item class="font-18" *ngFor="let page of pages" (click)="goto(page)">
+                {{page.title}}
+                <ion-icon item-right class="em-2" [name]="page.icon"></ion-icon>
+            </button>
+            <button ion-item class="font-18" (click)="logout()">
+                Logout
+                <ion-icon item-right class="em-2" name="ios-log-out-outline"></ion-icon>
+            </button>
+        </ion-list>
+    </ion-content>
+    <ion-footer>
+        <p class="font-18" align="center">Version - {{appVersionNumber}}</p>
+    </ion-footer>
+</ion-menu>
+<ion-nav [root]="rootPage" #content #nav></ion-nav>

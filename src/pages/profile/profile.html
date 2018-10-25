@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <button class="bg-transparent" menuToggle>
+      <ion-icon class="em-2" name="menu"></ion-icon>
+    </button>
+    <ion-title>My Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        Employee Id:
+      </ion-col>
+      <ion-col col-8>
+        {{myProfile.employeeId}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>
+        First Name:
+      </ion-col>
+      <ion-col col-8>
+        {{myProfile.firstName}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>
+        Last Name:
+      </ion-col>
+      <ion-col col-8>
+        {{myProfile.lastName}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>
+        Email:
+      </ion-col>
+      <ion-col col-8>
+        {{myProfile.email}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>
+        Date of Birth:
+      </ion-col>
+      <ion-col col-8>
+        {{myProfile.dob}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>
+        Phone:
+      </ion-col>
+      <ion-col col-8>
+        {{myProfile.phone}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
