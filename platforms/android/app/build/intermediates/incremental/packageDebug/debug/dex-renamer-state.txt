@@ -1,4 +1,4 @@
-#Thu Oct 25 19:49:23 IST 2018
-base.0=D\:\\demoapp\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Fri Oct 26 13:07:19 IST 2018
+base.0=D\:\\Demoapp\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 renamed.0=classes.dex
-file.0=D\:\\demoapp\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex
+file.0=D\:\\Demoapp\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex
