@@ -83,7 +83,6 @@ var LoginPage = /** @class */ (function () {
                     _this.common.loading('Logging In', 1000, '');
                     _this.common.nativeStorage.setItem('LoggedIn_User', _this.validEmail[0]);
                     _this.global.currentUser = _this.validEmail[0];
-                    console.log("Valid Email" + JSON.stringify(_this.global.currentUser));
                     _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */]);
                 }
                 else {
@@ -91,7 +90,7 @@ var LoginPage = /** @class */ (function () {
                 }
             }
         }, function (error) {
-            console.log("Validate User: " + error);
+            console.log('Validate User Error: ' + error);
             _this.common.toast(error, 5000, 'bottom', '');
         });
     };
@@ -134,7 +133,7 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"D:\demoapp\src\pages\login\login.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title align="center">Login</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <div class="row padding-b20" align="center">\n    <span class="col margin-t50">\n        <hr class="hr-line">\n    </span>\n    <span class="col-50 padding-5">\n      <ion-icon class="em-8" name="ios-contact-outline"></ion-icon>\n    </span>\n    <span class="col margin-t50">\n        <hr class="hr-line">\n    </span>\n  </div>\n  <ion-list>\n    <ion-item class="padding-none">\n      <ion-label stacked>Email</ion-label>\n      <ion-input type="email" [(ngModel)]="user.email"></ion-input>\n    </ion-item>\n    <ion-item class="padding-none">\n      <ion-label stacked>Password</ion-label>\n      <ion-input type="password" [(ngModel)]="user.password"></ion-input>\n    </ion-item>\n  </ion-list>\n  <div padding>\n    <button ion-button color="primary" block (click)="submit()">\n      Log In&nbsp;&nbsp;\n      <ion-icon class="em-2" name="ios-log-in-outline"></ion-icon>\n    </button>\n  </div>\n  <div padding>\n    <span class="float-left">\n      <button class="font-15 bg-transparent" (click)="forgotPassword()">Forgot Password?</button>\n    </span>\n    <span class="float-right">\n      <button class="font-15 bg-transparent" (click)="signUp()">Signup</button>\n    </span>\n  </div>\n</ion-content>'/*ion-inline-end:"D:\demoapp\src\pages\login\login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"D:\demoapp\src\pages\login\login.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title align="center">Login</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content class="my-image" padding>\n  <div class="row padding-b20" align="center">\n    <span class="col margin-t50">\n        <hr class="hr-line">\n    </span>\n    <span class="col-50 padding-5">\n      <ion-icon class="em-8" name="ios-contact-outline"></ion-icon>\n    </span>\n    <span class="col margin-t50">\n        <hr class="hr-line">\n    </span>\n  </div>\n  <ion-list>\n    <ion-item class="padding-none">\n      <ion-label stacked>Email</ion-label>\n      <ion-input type="email" [(ngModel)]="user.email"></ion-input>\n    </ion-item>\n    <ion-item class="padding-none">\n      <ion-label stacked>Password</ion-label>\n      <ion-input type="password" [(ngModel)]="user.password"></ion-input>\n    </ion-item>\n  </ion-list>\n  <div padding>\n    <button ion-button color="primary" block (click)="submit()">\n      Log In&nbsp;&nbsp;\n      <ion-icon class="em-2" name="ios-log-in-outline"></ion-icon>\n    </button>\n  </div>\n  <div padding>\n    <span class="float-left">\n      <button class="font-15 bg-transparent" (click)="forgotPassword()">Forgot Password?</button>\n    </span>\n    <span class="float-right">\n      <button class="font-15 bg-transparent" (click)="signUp()">Signup</button>\n    </span>\n  </div>\n</ion-content>'/*ion-inline-end:"D:\demoapp\src\pages\login\login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__providers_authorization_authorization__["a" /* AuthorizationProvider */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
@@ -212,7 +211,7 @@ var ProfilePage = /** @class */ (function () {
     };
     ProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-profile',template:/*ion-inline-start:"D:\demoapp\src\pages\profile\profile.html"*/'<ion-header>\n  <ion-navbar>\n    <button class="bg-transparent" menuToggle>\n      <ion-icon class="em-2" name="menu"></ion-icon>\n    </button>\n    <ion-title>My Profile</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <ion-grid>\n    <ion-row>\n      <ion-col col-6>\n        Employee Id:\n      </ion-col>\n      <ion-col col-6>\n        {{myProfile.employeeId}}\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-6>\n        First Name:\n      </ion-col>\n      <ion-col col-6>\n        {{myProfile.firstName}}\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-6>\n        Last Name:\n      </ion-col>\n      <ion-col col-6>\n        {{myProfile.lastName}}\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-6>\n        Email:\n      </ion-col>\n      <ion-col col-6>\n        {{myProfile.email}}\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-6>\n        Date of Birth:\n      </ion-col>\n      <ion-col col-6>\n        {{myProfile.dob}}\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-6>\n        Phone:\n      </ion-col>\n      <ion-col col-6>\n        {{myProfile.phone}}\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"D:\demoapp\src\pages\profile\profile.html"*/,
+            selector: 'page-profile',template:/*ion-inline-start:"D:\demoapp\src\pages\profile\profile.html"*/'<ion-header>\n  <ion-navbar>\n    <button class="bg-transparent" menuToggle>\n      <ion-icon class="em-2" name="menu"></ion-icon>\n    </button>\n    <ion-title>My Profile</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <ion-grid>\n    <ion-row>\n      <ion-col col-4>\n        Employee Id:\n      </ion-col>\n      <ion-col col-8>\n        {{myProfile.employeeId}}\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-4>\n        First Name:\n      </ion-col>\n      <ion-col col-8>\n        {{myProfile.firstName}}\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-4>\n        Last Name:\n      </ion-col>\n      <ion-col col-8>\n        {{myProfile.lastName}}\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-4>\n        Email:\n      </ion-col>\n      <ion-col col-8>\n        {{myProfile.email}}\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-4>\n        Date of Birth:\n      </ion-col>\n      <ion-col col-8>\n        {{myProfile.dob}}\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-4>\n        Phone:\n      </ion-col>\n      <ion-col col-8>\n        {{myProfile.phone}}\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"D:\demoapp\src\pages\profile\profile.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_common_common__["a" /* CommonProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_global_global__["a" /* GlobalProvider */]])
     ], ProfilePage);
@@ -771,11 +770,11 @@ var MyApp = /** @class */ (function () {
             if (_this.common.networkStatus() == 'none') {
                 _this.global.isConnected = false;
                 _this.global.isOnline = false;
-                console.log('Network is offline ' + _this.global.isConnected);
+                console.log('Network is offline: ' + _this.global.isConnected);
                 _this.common.networkToast();
             }
             else {
-                console.log('Network is online ' + _this.global.isConnected);
+                console.log('Network is online: ' + _this.global.isConnected);
                 _this.global.isConnected = true;
                 _this.global.isOnline = true;
             }
@@ -820,12 +819,12 @@ var MyApp = /** @class */ (function () {
         var _this = this;
         this.common.network.onDisconnect().subscribe(function () {
             _this.global.isOnline = false;
-            console.log('Network is offline ' + _this.global.isOnline);
+            console.log('Network is offline: ' + _this.global.isOnline);
             _this.common.networkToast();
         });
         this.common.network.onConnect().subscribe(function () {
             _this.global.isOnline = true;
-            console.log('Network is online ' + _this.global.isOnline);
+            console.log('Network is online: ' + _this.global.isOnline);
             _this.common.toast('Network is online', 3000, 'bottom', '');
         });
     };
@@ -841,7 +840,7 @@ var MyApp = /** @class */ (function () {
                 _this.checkSignedUpUser();
             }
             else {
-                console.log(error);
+                console.log('Get Current User Data Error: ' + error);
             }
         });
     };
@@ -857,7 +856,7 @@ var MyApp = /** @class */ (function () {
                 _this.rootPage = __WEBPACK_IMPORTED_MODULE_8__pages_login_login__["a" /* LoginPage */];
             }
             else {
-                console.log(error);
+                console.log('Check Signed Up User Error: ' + error);
             }
         });
     };
@@ -873,7 +872,7 @@ var MyApp = /** @class */ (function () {
                 manufacturer: _this.device.manufacturer
             };
             _this.common.nativeStorage.setItem('Device_Data', _this.deviceData);
-            console.log(JSON.stringify(_this.deviceData));
+            console.log('Device Data: ' + JSON.stringify(_this.deviceData));
         });
     };
     MyApp.prototype.goto = function (page) {
