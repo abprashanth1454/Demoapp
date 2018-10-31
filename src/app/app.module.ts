@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { Device } from '@ionic-native/device';
 import { AppVersion } from '@ionic-native/app-version';
 import { Network } from '@ionic-native/network';
+import { Camera } from '@ionic-native/camera';
+import { FCM } from '@ionic-native/fcm';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ProfilePage } from '../pages/profile/profile';
@@ -48,6 +50,8 @@ import { GlobalProvider } from '../providers/global/global';
     StatusBar,
     SplashScreen,
     NativeStorage,
+    Camera,
+    FCM,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthorizationProvider,
     CommonProvider,

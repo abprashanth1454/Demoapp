@@ -44,6 +44,10 @@
         "source": "D:\\Demoapp\\platforms\\android\\app\\src\\main\\res\\drawable-land-mdpi\\screen.png"
     },
     {
+        "merged": "D:\\Demoapp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_camera_provider_paths.xml.flat",
+        "source": "D:\\Demoapp\\platforms\\android\\app\\src\\main\\res\\xml\\camera_provider_paths.xml"
+    },
+    {
         "merged": "D:\\Demoapp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-port-ldpi_screen.png.flat",
         "source": "D:\\Demoapp\\platforms\\android\\app\\src\\main\\res\\drawable-port-ldpi\\screen.png"
     },

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AlertController, LoadingController, MenuController, ToastController } from 'ionic-angular';
+import { AlertController, LoadingController, MenuController, ToastController, Platform } from 'ionic-angular';
 import { NativeStorage } from '@ionic-native/native-storage';
 import { Network } from '@ionic-native/network';
 
@@ -14,7 +14,8 @@ export class CommonProvider {
     public menuCtrl: MenuController,
     public nativeStorage: NativeStorage,
     public network: Network,
-    public toastCtrl: ToastController) {
+    public toastCtrl: ToastController,
+    public platform: Platform) {
     
   }
 
