@@ -13,6 +13,14 @@
               "count": 1
             },
             {
+              "xml": "<feature name=\"AppCenterShared\"><param name=\"onload\" value=\"true\" /><param name=\"android-package\" value=\"com.microsoft.azure.mobile.cordova.AppCenterSharedPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"AppCenterCrashes\"><param name=\"onload\" value=\"true\" /><param name=\"android-package\" value=\"com.microsoft.azure.mobile.cordova.AppCenterCrashesPlugin\" /></feature>",
+              "count": 1
+            },
+            {
               "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
               "count": 1
             },
@@ -53,6 +61,12 @@
       },
       "AndroidManifest.xml": {
         "parents": {
+          "/manifest": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+              "count": 1
+            }
+          ],
           "/*": [
             {
               "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
@@ -101,6 +115,12 @@
     "cordova-plugin-app-version": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
+    "cordova-plugin-appcenter-shared": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-appcenter-crashes": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
     "cordova-plugin-camera": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
@@ -140,6 +160,22 @@
       "pluginId": "cordova-plugin-app-version",
       "clobbers": [
         "cordova.getAppVersion"
+      ]
+    },
+    {
+      "id": "cordova-plugin-appcenter-shared.AppCenter",
+      "file": "plugins/cordova-plugin-appcenter-shared/www/AppCenter.js",
+      "pluginId": "cordova-plugin-appcenter-shared",
+      "clobbers": [
+        "AppCenter"
+      ]
+    },
+    {
+      "id": "cordova-plugin-appcenter-crashes.Crashes",
+      "file": "plugins/cordova-plugin-appcenter-crashes/www/Crashes.js",
+      "pluginId": "cordova-plugin-appcenter-crashes",
+      "clobbers": [
+        "AppCenter.Crashes"
       ]
     },
     {
@@ -260,6 +296,8 @@
   ],
   "plugin_metadata": {
     "cordova-plugin-app-version": "0.1.9",
+    "cordova-plugin-appcenter-shared": "0.2.2",
+    "cordova-plugin-appcenter-crashes": "0.2.2",
     "cordova-plugin-camera": "4.0.3",
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-fcm-with-dependecy-updated": "2.2.6",

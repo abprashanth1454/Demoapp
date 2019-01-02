@@ -11,6 +11,7 @@ import { ChangepasswordPage } from '../pages/changepassword/changepassword';
 import { ReportPage } from '../pages/report/report';
 import { CommonProvider } from '../providers/common/common';
 import { GlobalProvider } from '../providers/global/global';
+import { AppCenterCrashes } from '@ionic-native/app-center-crashes';
 
 @Component({
   templateUrl: 'app.html'
@@ -54,7 +55,8 @@ export class MyApp {
     public common: CommonProvider,
     public global: GlobalProvider,
     public device: Device,
-    public appVersion: AppVersion) {
+    public appVersion: AppVersion,
+    private appCenterCrashes: AppCenterCrashes) {
     platform.ready().then(() => {
       statusBar.styleDefault();
       splashScreen.hide();
@@ -71,6 +73,15 @@ export class MyApp {
       this.getNetworkStatus();
       this.getCurrentUserData();
       this.getAppData();
+      this.appCenterCrashes.setEnabled(true).then(() => {
+        this.appCenterCrashes.lastSessionCrashReport().then(report => {
+          if (!report) {
+            console.log('No Crash report');
+          } else {
+            console.log('Crash report', JSON.stringify(report));
+          }
+        });
+      });
     });
 
     platform.registerBackButtonAction(() => {

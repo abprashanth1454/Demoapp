@@ -9,6 +9,22 @@ module.exports = [
     ]
   },
   {
+    "id": "cordova-plugin-appcenter-shared.AppCenter",
+    "file": "plugins/cordova-plugin-appcenter-shared/www/AppCenter.js",
+    "pluginId": "cordova-plugin-appcenter-shared",
+    "clobbers": [
+      "AppCenter"
+    ]
+  },
+  {
+    "id": "cordova-plugin-appcenter-crashes.Crashes",
+    "file": "plugins/cordova-plugin-appcenter-crashes/www/Crashes.js",
+    "pluginId": "cordova-plugin-appcenter-crashes",
+    "clobbers": [
+      "AppCenter.Crashes"
+    ]
+  },
+  {
     "id": "cordova-plugin-camera.Camera",
     "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
     "pluginId": "cordova-plugin-camera",
@@ -128,6 +144,8 @@ module.exports.metadata =
 // TOP OF METADATA
 {
   "cordova-plugin-app-version": "0.1.9",
+  "cordova-plugin-appcenter-shared": "0.2.2",
+  "cordova-plugin-appcenter-crashes": "0.2.2",
   "cordova-plugin-camera": "4.0.3",
   "cordova-plugin-device": "2.0.2",
   "cordova-plugin-fcm-with-dependecy-updated": "2.2.6",

@@ -20,6 +20,7 @@ import { ReportPage } from '../pages/report/report';
 import { AuthorizationProvider } from '../providers/authorization/authorization';
 import { CommonProvider } from '../providers/common/common';
 import { GlobalProvider } from '../providers/global/global';
+import { AppCenterCrashes } from '@ionic-native/app-center-crashes';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { GlobalProvider } from '../providers/global/global';
     Device,
     AppVersion,
     Network,
-    GlobalProvider
+    GlobalProvider,
+    AppCenterCrashes
   ]
 })
 export class AppModule {

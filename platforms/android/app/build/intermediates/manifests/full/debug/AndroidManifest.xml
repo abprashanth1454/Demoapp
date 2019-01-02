@@ -80,17 +80,6 @@
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-
-        <activity
-            android:name="com.gae.scaffolder.plugin.FCMPluginActivity"
-            android:exported="true"
-            android:launchMode="singleTop" >
-            <intent-filter>
-                <action android:name="FCM_PLUGIN_ACTIVITY" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
         <!--
          FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"
